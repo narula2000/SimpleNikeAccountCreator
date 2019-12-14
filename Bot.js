@@ -1,6 +1,4 @@
 const puppeteer = require("puppeteer");
-const request = require("request");
-const fs = require("fs");
 
 var emailVal =
   "bravo" +
@@ -10,8 +8,7 @@ var emailVal =
 var passwordVal = "asdfgHjk1";
 var fNameVal = "Charlie";
 var sNameVal = "Harvey";
-var info;
-var themessage;
+var DoB = "01/05/19" + Math.floor(Math.random() * (99 - 55) + 55).toString();
 
 const AcceptCookies =
   "#cookie-settings-layout > div > div > div > div.ncss-row.mt5-sm.mb7-sm > div:nth-child(2) > button";
@@ -29,8 +26,6 @@ const submit = '.joinSubmit.nike-unite-component > input[type="button"]';
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-
-console.log("The Bot is starting...");
 
 (async () => {
   var page;
@@ -51,36 +46,34 @@ console.log("The Bot is starting...");
   await page.waitFor(1000);
 
   await page.click(loginBtn);
-  console.log("Login Button Clicked...");
 
   await page.click(registerBtn);
-  console.log("Register Button Clicked");
 
   await page.waitFor(2000);
 
   console.log("email: " + emailVal);
   await page.type(email, emailVal);
-  console.log("entered email");
 
   await page.type(password, passwordVal);
+  console.log("password: " + passwordVal);
 
   await page.type(fName, fNameVal);
+  console.log("Name: " + fNameVal);
 
   await page.type(sName, sNameVal);
+  console.log("Surname: " + sNameVal);
 
+  console.log("Date: " + DoB);
   await page.type(
     dob,
-    "01/05/19" + Math.floor(Math.random() * (99 - 55) + 55).toString()
+    "01/05/19" + DoB
   );
 
   await page.click(gender);
 
-  console.log("waiting 0.5s");
   await page.waitFor(500);
-  console.log("waiting done");
-
   await page.click(submit);
-  console.log("submitted");
+	console.log("==============================================================")
 
   browser.close();
   process.exit();
