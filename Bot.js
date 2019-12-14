@@ -43,7 +43,7 @@ console.log("The Bot is starting...");
   page = await browser.newPage();
 
   await page.setViewport({ width: 1200, height: 800 });
-  await page.goto("https://www.nike.com/gb/launch/");
+  await page.goto("https://www.nike.com/th/launch/");
 
   //await page.click(AcceptCookies);
   //console.log("Accepted Cookies...");
