@@ -1,4 +1,9 @@
 # Simple Nike Account Creator
+
+
+This is a fork which make this Repo able to make an account without using phone number in Thailand.
+
+
 A simple nike account creator and verifier I made using puppeteer and request in node js,
 this bot will automate creating nike accounts for you and will also also verify the mobile number so the accounts can be used to purchase shoes on Nike.com
 
@@ -29,7 +34,7 @@ TO RUN THE PROGRAM: in terminal type "forever bot.js" this will run the program 
 Now go into botUS.js and replace the variables at the top with your getsmscode account and some details you would like for the generated accounts to have.
 
 TO RUN THE PROGRAM: in terminal type "forever botUS.js" this will run the program and upon completion will restart it and run it again and again forever until you press "ctrl + C" to end the program, it does not take up much processor power so you can just run it in the background.
- 
+
 
 Hopefully it works, it is just a very simple application without much complexity.
 
