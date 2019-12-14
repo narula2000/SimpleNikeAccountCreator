@@ -8,7 +8,6 @@ var emailVal =
 var passwordVal = "asdfgHjk1";
 var fNameVal = "Charlie";
 var sNameVal = "Harvey";
-var DoB = "01/05/19" + Math.floor(Math.random() * (99 - 55) + 55).toString();
 
 const AcceptCookies =
   "#cookie-settings-layout > div > div > div > div.ncss-row.mt5-sm.mb7-sm > div:nth-child(2) > button";
@@ -63,17 +62,15 @@ function sleep(ms) {
   await page.type(sName, sNameVal);
   console.log("Surname: " + sNameVal);
 
-  console.log("Date: " + DoB);
-  await page.type(
-    dob,
-    "01/05/19" + DoB
-  );
+  var DoB = "01/05/19" + Math.floor(Math.random() * (99 - 55) + 55).toString();
+  await page.type(dob, DoB);
+	console.log("Date: "+ DoB);
 
   await page.click(gender);
 
   await page.waitFor(500);
   await page.click(submit);
-	console.log("==============================================================")
+  console.log("==============================================================");
 
   browser.close();
   process.exit();
