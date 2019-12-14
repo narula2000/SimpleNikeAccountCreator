@@ -1,6 +1,0 @@
-email: bravo.3490@gmail.com
-password: asdfgHjk1
-Name: Charlie
-Surname: Harvey
-Date: 01/05/1990
-==============================================================
